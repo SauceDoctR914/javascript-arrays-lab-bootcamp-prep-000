@@ -8,8 +8,8 @@ function destructivelyPrependKitten(name) {
   kittens.unshift(name);
   return kittens;
 }
-function destructivelyRemoveLastKitten(name) {
-    return kittens.pop(name);
+function destructivelyRemoveLastKitten() {
+    return kittens.pop();
 }
 function appendKitten(name) {
   return [...kittens, name]
@@ -20,6 +20,10 @@ function appendKitten(name) {
 function removeLastKitten(){
   return kittens.slice(0, kittens.length - 1);
 }
-function removeFirstKitten(){
+function destructivelyRemoveFirstKitten(){
   return kittens.shift();
+}
+
+function removeFirstKitten(){
+  kittens.slice(1);
 }
